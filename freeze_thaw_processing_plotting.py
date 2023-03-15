@@ -43,7 +43,7 @@ def heatmap_plotter(counts_df):
     plt.title("Freeze-Thaw Events per Year per Month")
     plt.xlabel("Month")
     plt.ylabel("Year")
-    plt.savefig("C:/PhD/Courses/ENGO697/Data/HistoricData/Freeze_Thaw/Rawdata/heatmap_col.png")
+    plt.savefig("/heatmap_col.png")
 
 
 def plot_by_month(counts_df):
@@ -64,7 +64,7 @@ def plot_by_month(counts_df):
         plt.ylabel("Count")
 
         # Save the plot to file
-        plt.savefig("C:/PhD/Courses/ENGO697/Data/HistoricData/Freeze_Thaw/Rawdata/month{}_plot.png".format(month))
+        plt.savefig("/month{}_plot.png".format(month))
 
 
 def plot_by_month_single(counts_df):
@@ -91,7 +91,7 @@ def plot_by_month_single(counts_df):
     fig.tight_layout()
 
     # Save the plot to file
-    plt.savefig("C:/PhD/Courses/ENGO697/Data/HistoricData/Freeze_Thaw/Rawdata/month_plots_single.png")
+    plt.savefig("month_plots_single.png")
 
 def plot_freeze_thaw_trend(counts_df, window_size=10):
     # Aggregate counts by year
@@ -134,12 +134,12 @@ def plot_freeze_thaw_trend(counts_df, window_size=10):
     ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left',  edgecolor='#9CBDC0')
 
     plt.tight_layout()
-    plt.savefig("C:/PhD/Courses/ENGO697/Data/HistoricData/Freeze_Thaw/Rawdata/yeartrendfig.png")
+    plt.savefig("/yeartrendfig.png")
 
 if __name__ == '__main__':
     # Set input and output file paths
-    input_file = r'C:/PhD/Courses/ENGO697/Data/HistoricData/Freeze_Thaw/Rawdata/ahccd (2).csv'
-    output_file = r'C:/PhD/Courses/ENGO697/Data/HistoricData/Freeze_Thaw/Rawdata/counts.csv'
+    input_file = r'/ahccd (2).csv'
+    output_file = r'counts.csv'
 
     # Process the data and save to file
     process_data(input_file, output_file)
